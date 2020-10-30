@@ -12,6 +12,8 @@ from gtts import gTTS
 from discord import Client
 from discord.ext import commands
 
+import Tokenizer
+
 main_channel_name="arai"
 joke_channel_name="jokes"
 
@@ -117,4 +119,4 @@ async def on_message(message):
             elif "suggestion" in msg_content.lower():
                 await ARAI_CMD_SUGGESTION(message)
 
-client.run('NzY3MzkwNDM5MzAwMjY4MDMy.X4xOCg.1WtNBawl3y6atcELm0Sy2sqE3Y0')
+client.run(Tokenizer.discordToken)
